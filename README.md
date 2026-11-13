@@ -1,30 +1,45 @@
 # Tracker CE Mods
 
-Modified firmware for the Polyend Tracker family, built on the
-[Polyend Tracker Community Edition](https://github.com/polyend/tracker-ce).
+My mods for the Polyend Tracker, built on top of the
+[Community Edition](https://github.com/polyend/tracker-ce) firmware. Everything the CE
+does still works, I just added stuff on top.
 
-New features: polymeter, rotate, new chance conditions & live fill, song repeats,
-per-track MIDI in, Sample Editor tempo grid. See the manual for details.
+What I added: polymeter (every track can have its own length), rotate, new chance
+conditions and live fill, song repeats, per-track MIDI in, and a tempo grid in the
+Sample Editor. The manual explains how each one works.
 
-## Downloads
+## Download
 
-| Device | File |
-|---|---|
-| Tracker Mini | [firmware/TrackerMini_CE_1.0.0.ptf](firmware/TrackerMini_CE_1.0.0.ptf) |
-| Tracker+ | [firmware/TrackerPlus_CE_1.0.0.ptf](firmware/TrackerPlus_CE_1.0.0.ptf) |
-| Tracker (original) | [firmware/PolyendTracker_CE_1.0.0.ptf](firmware/PolyendTracker_CE_1.0.0.ptf) |
+Pick the file for your device:
+
+- Tracker Mini: [firmware/TrackerMini_CE_1.0.1.ptf](firmware/TrackerMini_CE_1.0.1.ptf)
+- Tracker+: [firmware/TrackerPlus_CE_1.0.1.ptf](firmware/TrackerPlus_CE_1.0.1.ptf)
+- Tracker (the original one): [firmware/PolyendTracker_CE_1.0.1.ptf](firmware/PolyendTracker_CE_1.0.1.ptf)
 
 Manual: [Tracker-CE-Mods-Manual.pdf](Tracker-CE-Mods-Manual.pdf)
 
-Install: back up the `Projects/` folder of your SD card, copy the `.ptf` for your device
-to the `/Firmware/` folder, then open Config > Firmware > Firmware update, select the file
-and confirm.
+## Install
+
+Back up the `Projects/` folder on your SD card first. Then copy the `.ptf` into the
+`/Firmware/` folder, go to Config > Firmware > Firmware update, pick the file and
+confirm.
+
+## Latest fixes
+
+- An empty MIDI track now plays the MIDI instrument of its input channel when you play
+  or record on it with per-track MIDI in.
+- Songs with all 255 slots filled don't break playback anymore.
+- With polymeter, the end of the pattern, the next pattern in the song, the metronome
+  and MIDI sync now follow the pattern length, not the length of track 1.
+- Changing the MIDI in settings while holding notes no longer leaves notes hanging.
+
+If you find a bug, open an issue here.
 
 ## License
 
-Free, noncommercial community modification, distributed under the Polyend Tracker
-Community Edition License (PolyForm Noncommercial 1.0.0 with Polyend Additional
-Permissions) — see [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md). Not affiliated with
-or endorsed by Polyend. Use at your own risk.
+This is a free, noncommercial community mod. It's under the same license as the
+Community Edition (PolyForm Noncommercial 1.0.0 with the Polyend Additional
+Permissions), see [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md). It's not affiliated
+with or endorsed by Polyend, so use it at your own risk.
 
 Required Notice: Copyright (c) 2020-2026 Polyend Sp. z o.o. and Polyend Tracker Community Edition Contributors (https://github.com/polyend/tracker-ce)
